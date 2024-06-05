@@ -1,0 +1,11 @@
+# main links
+main:
+  
+  - title: "Home"
+    url: /
+  - title: "Categories"
+    url: /categories/
+  - title: "Now"
+    url: /now/
+  - title: "About"
+    url: /about/

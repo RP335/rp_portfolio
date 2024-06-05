@@ -1,2 +1,2 @@
-# Portfolio website code for Rahul Peter(RP)
-title says it
+# RP's Portfolio
+This is the repo for my personal website.

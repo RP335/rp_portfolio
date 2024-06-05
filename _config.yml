@@ -1,44 +1,95 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: "Thoughts in Motion"
+subtitle: // a personal website
+email: blog@mauromotion.com
+description: "This is Mauro's personal website. Motion designer, music lover, overall nerd."
+# domain: blog.mauromotion.com
+url: https://blog.mauromotion.com
+# baseurl: "/thoughts-in-motion"
+twitter_username: mauromograph
+github_username: mauromotion
+# logo: "/assets/images/MauroMotion_logo_v002.png"
+github: [metadata]
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default"
-
-sass:
-  sass_dir: _sass
+minimal_mistakes_skin: "mauro" # "air"contrast", "aqua", "dirt", "sunrise", "dark", "default", "neon", "plum", "mint"
+search: true
 
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+
+# Site Author
+author:
+  name: "Rahul Peter"
+  # avatar: "assets/images/profile_picture.jpg"
+  bio: "ouwee"
+  location: "Blr"
+  email:
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:yxngr4j@gmail.com"
+    - label: "GitHub"
+      icon: "fa-brands fa-square-github"
+      url: "https://github.com/RP335"
+    - label: "Behance"
+      icon: "fab fa-behance-square"
+      url: "oh no that doesn't exists"
+    - label: "what"
+      icon: "fa-brands fa-mastodon"
+      url: "boom"
+    - label: "Reddit"
+      icon: "fa-brands fa-square-reddit"
+      url: "https://www.reddit.com/user/keisuke_1001"
+    - label: "Last.fm"
+      icon: "fab fa-lastfm-square"
+      url: "no way"
+
+
+# include: ["_pages"]
+
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      show_date: true
+  # _now_archive
+  - scope:
+      path: ""
+      type: now
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      show_date: false
+
+# Collections
+collections:
+  now:
+    output: true
+    permalink: /:collection/:path/
+
+category_archive:
+  type: liquid
+  path: /categories/
+
+footer:
+  links:
+    # - label: "Mastodon"
+    #   icon: "fab fa-mastodon"
+    #   url: "https://mograph.social/@mauro"
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
