@@ -33,6 +33,9 @@ github_username:  jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"
 
+sass:
+  sass_dir: _sass
+
 plugins:
   - jekyll-feed
   - jekyll-include-cache
