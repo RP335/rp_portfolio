@@ -1,13 +1,12 @@
-title: "Thoughts in Motion"
+title: "RP's Den"
 subtitle: // a personal website
-email: blog@mauromotion.com
-description: "This is Mauro's personal website. Motion designer, music lover, overall nerd."
+email: rahul.peter@gmail.com
+description: "This is Rahul's personal site. Musician, programmer and producer."
 # domain: blog.mauromotion.com
-url: https://blog.mauromotion.com
-# baseurl: "/thoughts-in-motion"
-twitter_username: mauromograph
-github_username: mauromotion
-# logo: "/assets/images/MauroMotion_logo_v002.png"
+url: www.rp335orb.com
+twitter_username: BleuOrbOfficial
+github_username: RP335
+logo: "/assets/images/rp_logo.png"
 github: [metadata]
 
 # Build settings
@@ -22,29 +21,39 @@ plugins:
 # Site Author
 author:
   name: "Rahul Peter"
-  # avatar: "assets/images/profile_picture.jpg"
+  avatar: "assets/images/pfp.jpg"
   bio: "ouwee"
   location: "Blr"
   email:
-  links:
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:yxngr4j@gmail.com"
-    - label: "GitHub"
-      icon: "fa-brands fa-square-github"
-      url: "https://github.com/RP335"
-    - label: "Behance"
-      icon: "fab fa-behance-square"
-      url: "oh no that doesn't exists"
-    - label: "what"
-      icon: "fa-brands fa-mastodon"
-      url: "boom"
-    - label: "Reddit"
-      icon: "fa-brands fa-square-reddit"
-      url: "https://www.reddit.com/user/keisuke_1001"
-    - label: "Last.fm"
-      icon: "fab fa-lastfm-square"
-      url: "no way"
+links:
+  - label: "Email"
+    icon: "fas fa-envelope"
+    url: "mailto:rahul.peter@gmail.com"
+  - label: "GitHub"
+    icon: "fa-brands fa-square-github"
+    url: "https://github.com/RP335"
+  - label: "SoundCloud"
+    icon: "fa-brands fa-soundcloud"
+    url: "https://soundcloud.com/gr8beatz-320169455"
+  - label: "YouTube"
+    icon: "fa-brands fa-youtube"
+    url: "https://www.youtube.com/@bleuorb"
+  - label: "Spotify"
+    icon: "fa-brands fa-spotify"
+    url: "https://open.spotify.com/artist/3gig754purvj3njLtEW8JH?si=oFbczxjVQSKth3UiA_g55A"
+  - label: "Twitter"
+    icon: "fa-brands fa-twitter"
+    url: "https://twitter.com/BleuOrbOfficial"
+  - label: "Facebook"
+    icon: "fa-brands fa-facebook"
+    url: "https://facebook.com/rahul.peter.39"
+  - label: "Gumroad"
+    icon: "fa-brands fa-gumroad"
+    url: "https://bleuorb.gumroad.com/"
+  - label: "LinkedIn"
+    icon: "fa-brands fa-linkedin"
+    url: "https://www.linkedin.com/in/rahul-peter-172293194/"
+
 
 
 include: ["_pages"]
