@@ -5,7 +5,7 @@ permalink: /about/
 ---
 My name is Rahul Peter, and I work as a Software Engineer in Bangalore. Everything you want to know is here.
 
-See what I'm doing [now](/now).
+See what I'm doing [now](/rp_portfolio/now).
 
 ### Music
 

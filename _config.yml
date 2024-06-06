@@ -21,7 +21,7 @@ plugins:
 author:
   name: "Rahul Peter"
   avatar: "assets/images/pfp.jpg"
-  bio: "ouwee"
+  bio: "Everything about my creative side here sprinkled with a bit of my tech exporations. If you want to look at my professional experience, check out my CV"
   location: "Blr"
   # email:
   links:
@@ -52,6 +52,12 @@ author:
     - label: "LinkedIn"
       icon: "fa-brands fa-linkedin"
       url: "https://www.linkedin.com/in/rahul-peter-172293194/"
+    - label: "CV(direct)"
+      icon: "fas fa-file-pdf"
+      url: "/rp_portfolio/assets/pdf/rahul_cv_2024_6.pdf"
+    - label: "CV(drive)"
+      icon: "fas fa-file-pdf"
+      url: "https://drive.google.com/file/d/13nValTwAz9Tzq3Ib5QHwZtOw35COJN67/view?usp=sharing"
 
 
 
