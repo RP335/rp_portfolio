@@ -32,10 +32,12 @@ To bring this concept to life, I created a plugin for MuseScore using QML and th
 
 Here is the link to the [GitHub repository](https://github.com/RP335/NegativeHarmonyGenerator/blob/main/negativeharmonygenerator.qml) for the plugin.
 
-![Score Before Transformation](/assets/images/before_transformation_image.png)
+<!-- ![Score Before Transformation](/assets/images/before_transformation_image.png) -->
+<img src="{{site.baseurl | prepend: site.url}}assets/before_transformation_image.png" alt="before_score" />
 *Score before transformation*
 
-![Score After Transformation](/assets/images/after_transformation_image.png)
+<!-- ![Score After Transformation](/assets/images/after_transformation_image.png) -->
+<img src="{{site.baseurl | prepend: site.url}}assets/after_transformation_image.png" alt="after_score" />
 *Score after transformation*
 
 ## Using the Plugin
