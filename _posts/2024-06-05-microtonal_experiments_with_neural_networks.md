@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Mircotonal Experiments with Audio Pt. 1"
+title: "The Microtonal Experiment"
 toc: false
 date: 2024-06-5 13:00:00 +0000
 categories: DeepLearning MusicTheory AudioProcessing
