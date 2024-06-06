@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Exploring Negative Harmony with MuseScore"
 toc: false
 date: 2021-05-7 13:00:00 +0000

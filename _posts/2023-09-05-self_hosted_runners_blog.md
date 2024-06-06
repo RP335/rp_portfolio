@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Configuring Self-Hosted Runners with GitHub Actions"
 toc: false
 date: 2023-09-05 13:00:00 +0000
