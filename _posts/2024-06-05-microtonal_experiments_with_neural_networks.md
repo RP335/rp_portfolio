@@ -1,56 +1,75 @@
 ---
 layout: single
-title: "Training on microtonal audio data"
+title: "Mircotonal Experiments with Audio Pt. 1"
 toc: false
-date: 2024-06-5 13:00:00 +0000
+date: 2024-06-6 9:00:00 +0000
 categories: DeepLearning MusicTheory AudioProcessing
 ---
 
-# Nobody has microtonal perfect pitch to the smallest cent, including computers.
-
-<br>
 
 ## Inspiration
 
-Microtonal music is extremely hard to grasp for someone like me as my sense of pitch is really bad at the sub-semitone level. In other words, I fail to figure out the difference between 2 notes which are less than 15 cents apart. However, I still can sense if notes are locked-in (a.k.a in perfect ratios of each other) by simply hearing it and this is common for many other humans just like me. Now, I want to know if a computer can identify what it is to tell apart if something is in a different tuning or not and the best way to check that is by seeing if it can tell one tuning apart from another. 
-<br>
+Shower thoughts: I recently heard this [piece](https://youtu.be/FO9ihziyL5c?feature=shared) but it felt much better than the original and that's what a lot of others I know personally said. Maybe 31 EDO is something which humans naturally gravitate to? 
+While most certainly a computer can't feel the same emotions as us while hearing perfectly locked-in intervals, I think it could identify them. If I did years of ear training maybe, I'd be able to tell apart 31 EDO from 19 EDO and so on, but what I want to see is if a computer could figure that out real quick.
 
-## EDO and it's definition
+## EDO and its Definition
 
-Placeholder for EDO definition: An EDO, or Equal Division of the Octave, is a tuning system that divides the octave into a specific number of equally spaced steps. Traditional Western music uses 12-EDO, but microtonal music explores other divisions such as 19-EDO, 31-EDO, and beyond. These alternative tunings offer unique intervals and harmonies not found in standard tuning.
-Refer the [Xenharmonic Wiki](https://en.xen.wiki/w/EDO).
-<br>
+EDO (what is it ?): An EDO, or Equal Division of the Octave, is a tuning system that divides the octave into a specific number of equally spaced steps. Traditional Western music uses 12-EDO, but microtonal music explores other divisions such as 19-EDO, 31-EDO, and beyond. These alternative tunings offer unique intervals and harmonies not found in standard tuning. Refer to the [Xenharmonic Wiki](https://en.xen.wiki/w/EDO).
 
 ## Approach
 
-If you'd like to see the full history of how my code developed into this, do refer [Github](https://github.com/RP335/microtonal_experiments)
-
+If you'd like to see the full history of how my code developed into this, do refer [Github](https://github.com/RP335/microtonal_experiments).
+<br>
 To summarize, I started by reading up about methods to classify stuff and came across a big explanation of neural networks and went down the rabbit hole of exploring these things.
 <br>
 
-
-I looked at [this](https://arxiv.org/abs/2405.16000) for reference to gain some insights as to how I could analyse pitched audio. 
-I was dealing with polyphonic audio and felt like I was shooting in the dark after getting this on an accuracy score upon implementing what was in that paper.
-
-![alt text](assets/images/microtonal_fail.jpg)
-<br>
-Scratching my head, I thought it was something wrong with how I processed the audio and looked at means how to improve that. I was redirected to sources which explained more things about better feature extraction, hyperparameter tuning, etc.
+I looked at [this](https://arxiv.org/abs/2405.16000) for reference to gain some insights as to how I could analyze pitched audio. 
+Seems like a decent start for implementing something of this sort and I felt that this method would prove to be more accurate than a regular RandomForestClassifier or the same thing tweaked and fine tuned. So I went with Leveraging Convolutional Neural Networks (CNNs) combined with Time-Distributed Networks (TDNs) and Long Short-Term Memory (LSTM) networks. This approach aims to capture both the spatial and temporal hierarchies in the audio data. I trained this model for up to 200 epochs to ensure it had ample opportunity to learn the patterns in the data.
 <br>
 
-Which led me to gain further insights into a topic I'd brushed upon in 3rd year (I'd done one experiment using CNNs to classify different drum samples back then inspired from Dylan Tallchief's [video](https://youtu.be/wx_iuO-dI5w?feature=shared))
+I then tried a RandomForestClassifier, a more traditional machine learning method, to benchmark its performance against the deep learning model.
 
 <br>
+To improve the performance of the Random Forest, I fine-tuned its hyperparameters using grid search, optimizing settings like the number of trees, maximum depth, and minimum samples split.
 
-But for now, here's some real technical analysis of the same.
 
-## Technical Insights
+<br>
+So I began, and the first thing I did was generate the dataset as I couldn't find a dataset which had the following
+- triads in various edos
+- each triad can be in random pitches (not just 12 tet keys for the root notes)
 
-- Convolutional Neural Networks (CNNs): Leveraging the power of CNNs to capture the spatial hierarchies in audio data.
-- Time-Distributed Networks (TDNs) with LSTMs: Combining TDNs with Long Short-Term Memory (LSTM) networks to handle the temporal     aspects of audio signals.
-- Simple Classifiers: Exploring basic classifiers like RandomForest and SVM to benchmark performance.
-- Hyperparameter Tuning: Fine-tuning model parameters to improve accuracy.
+To do this task, I adopted [Xenharmlib](https://xenharmlib.readthedocs.io/en/latest/), a music theory library in python for exploration of microtonality. Thank god for the existence ot this, otherwise I'd have to break my head trying to generate the dataset itself. Enough ranting, let's continue.
+<br>
+Since it was triads, I needed to generate edos >= 5 and I chose 11, 15, 19, 31, 53 and 24 as the options. Cycling through them I got a full dataset of chords. Here's the code for that.
 
-## Conclusion
-Given my exploration of this topic, I think that CNNs with TDNs gave the best accuracy (27% in this case). Which is really bad for a NN. But hey, I would get a 0 so it's better than me ofc. Cause after 200 epochs, you'd expect a random chance out of 6 edos which would be like 16.67% but this is 27 which is better. Maybe, there's a way out? I don't know yet. I'd have to look at this in detail later, but I'm going to sleep now. 
 
+
+### Code Snippet for Generating Microtonal Files
+
+```python
+import os
+from xenharmlib import EDOTuning, export, UpDownNotation, play
+import numpy as np
+
+output_dir = 'microtonal_audio_files'
+os.makedirs(output_dir, exist_ok=True)
+
+def generate_and_export_chords(edo,  duration=2.0, sample_rate=22050):
+    edoTuning = EDOTuning(edo)
+    root = edoTuning.pitch(0)
+    third = edoTuning.pitch(int(4*edo/12))
+    fifth = edoTuning.pitch(int(7*edo/12))
+    for i in range(40):
+        triad = edoTuning.pitch_scale([root, third, fifth]).transpose((np.random.randint(45,65))*edo/12)
+        filename = os.path.join(output_dir, f'microtonal_chord_{edo}edo_{i+1}.wav')
+        export.audio.export_wav(filename, triad, duration=duration, play_as_chord=True, sample_rate=sample_rate)
+```
+
+### Conclusion
+Given my exploration of this topic, I think that CNNs with TDNs gave the best accuracy (70.83%), which is quite decent for such a complex task. While this isn't perfect, it's a significant improvement over random guessing. There's still much to explore, and I believe that better feature extraction methods and further tuning could push these results even higher.
+
+This experiment has shown me that AI can indeed aid me in my microtonal explorations. Let me see what I can do next with microtones and AI.
+For further details on the implementation and code, you can refer to my Colab Notebook in the Github link above.
+
+And with that, I'm off to bed. Until next time, happy experimenting with microtonal music!
 
