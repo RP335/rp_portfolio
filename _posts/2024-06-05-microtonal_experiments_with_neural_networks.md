@@ -2,7 +2,7 @@
 layout: single
 title: "Mircotonal Experiments with Audio Pt. 1"
 toc: false
-date: 2024-06-6 9:00:00 +0000
+date: 2024-06-5 13:00:00 +0000
 categories: DeepLearning MusicTheory AudioProcessing
 ---
 
