@@ -2,7 +2,7 @@
 layout: post
 title: "Exploring Negative Harmony with MuseScore"
 toc: false
-date: 2021-05-06
+date: 2021-05-7 13:00:00 +0000
 categories:  MusicTheory MuseScore QML
 ---
 

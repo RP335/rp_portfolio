@@ -2,7 +2,7 @@
 layout: post
 title: "Configuring Self-Hosted Runners with GitHub Actions"
 toc: false
-date: 2023-08-015
+date: 2023-09-05 13:00:00 +0000
 categories: TechBlog
 ---
 
