@@ -21,7 +21,7 @@ plugins:
 author:
   name: "Rahul Peter"
   avatar: "assets/images/pfp.jpg"
-  bio: "Everything about my creative side here sprinkled with a bit of my tech exporations. If you want to look at my professional experience, check out my CV"
+  bio: "Check out CV(bottom) for professional exp"
   location: "Blr"
   # email:
   links:
@@ -40,13 +40,7 @@ author:
     - label: "Spotify"
       icon: "fa-brands fa-spotify"
       url: "https://open.spotify.com/artist/3gig754purvj3njLtEW8JH?si=oFbczxjVQSKth3UiA_g55A"
-    - label: "Twitter"
-      icon: "fa-brands fa-twitter"
-      url: "https://twitter.com/BleuOrbOfficial"
-    - label: "Facebook"
-      icon: "fa-brands fa-facebook"
-      url: "https://facebook.com/rahul.peter.39"
-    - label: "Gumroad"
+    - label: "Transcriptions"
       icon: "fa-brands fa-gumroad"
       url: "https://bleuorb.gumroad.com/"
     - label: "LinkedIn"
