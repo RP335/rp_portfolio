@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Configuring Self-Hosted Runners with GitHub Actions"
-date: 2024-06-06
+toc: false
+date: 2023-08-015
 categories: TechBlog
-author: Rahul Peter
-co-author: Veeraveni Ajay
 ---
 
 ## Introduction

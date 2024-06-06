@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Exploring Negative Harmony with MuseScore"
-date: 2024-06-06
+toc: false
+date: 2021-05-06
 categories:  MusicTheory MuseScore QML
-author: Rahul Peter
 ---
 
 ## Introduction
