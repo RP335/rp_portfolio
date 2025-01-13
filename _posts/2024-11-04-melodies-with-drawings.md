@@ -2,7 +2,7 @@
 layout: single
 title: "A Fun TouchDesigner experiment with Open Sound Control"
 toc: false
-date: 2021-05-7 13:00:00 +0000
+date: 2024-11-7 13:00:00 +0000
 categories:  MusicTheory CreativeCoding
 ---
 
