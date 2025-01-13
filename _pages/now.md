@@ -22,16 +22,11 @@ author_profile: false
 - Into **jazz**, **UK garage**, and **R&B**.
 - Frequently listening to Herbie Hancock and other jazz legends.
 
-### 🎞️ Watching
-
-- Not watching much these days.
-- Occasionally watching **animes** like **Initial D**, **Konosuba**, and **Samurai Champloo**.
-- Inspired by **Nujabes**, the producer behind Samurai Champloo's soundtrack.
 
 ### 🕹️ Playing
 
-- Playing **Smash Bros** and some **Namco** games.
-- Enjoying classic **Nintendo** games.
+- I'm currently playing Tears of the Kingdom way too much (an unhealthy amount hehe cause it's just a phenomenal game, I have no words to describe)
+- Others include MarioKart, SmashBros, KatamariDamacy, MetriodPrime... the list goes on 
 
 ### 🔭 Looking forward to...
 

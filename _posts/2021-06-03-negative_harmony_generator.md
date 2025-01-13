@@ -8,7 +8,7 @@ categories:  MusicTheory MuseScore QML
 
 ## Introduction
 
-Back in the day I'd see a lot of videos about negative harmony especially afater it got too much hype during the rise in popularity of Jacob Coller and being a music nerd myself, I found it fascinating. But I didn't quite understand how I'd use this concept in my own compositions or do this real quick without having to draw the circle of fifths and flip notes. So insticntively, the next thing I planned on doing was automating this whole process.
+Back in the day I'd see a lot of videos about negative harmony especially afater it got too much hype during the rise in popularity of Jacob Collier and being a music nerd myself, I found it fascinating. But I didn't quite understand how I'd use this concept in my own compositions or do this real quick without having to draw the circle of fifths and flip notes. So insticntively, the next thing I planned on doing was automating this whole process.
 In this post, I'll dive into my explorations of negative harmony in music theory and how I developed a method to transform scores using this concept. This journey began in May 2021 and led me to the create a plugin for MuseScore, enabling composers to use negative harmony as a compositional tool.
 
 ## Understanding Negative Harmony
