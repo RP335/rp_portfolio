@@ -24,7 +24,8 @@ this is the curve before I generated it's midi.
 
 ![curve midi](/rp_portfolio/assets/images/midi_curve_1.jpg)
 
-The midi sound really interesting given I chose this scale haha
+It's funny how the midi looks flipped. Maybe the way the curve is rendered on the browser is inverted. I'm really gonna have to debug what that is cause I didn't get time to cross-check given that we were almost late to submit haha.
+Also, he midi sounds really interesting given I chose this scale haha
 
 ![scale options](/rp_portfolio/assets/images/super_scale.jpg)
 
